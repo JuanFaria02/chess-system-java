@@ -17,10 +17,9 @@ public class Program {
         Scanner scan = new Scanner(System.in);
         ChessMatch chessMatch = new ChessMatch();
         List<ChessPiece> captured = new ArrayList<>();
-        while (true) {
+        while (!chessMatch.getCheckmate()) {
             //User Interface
             try {
-                UI.clearScreen();
                 UI.printMatch(chessMatch, captured);
                 System.out.println();
                 System.out.print("Source: ");
@@ -36,6 +35,10 @@ public class Program {
                 if (capturedPiece != null) {
                     captured.add(capturedPiece);
                 }
+                UI.clearScreen();
+                UI.printMatch(chessMatch, captured);
+                UI.clearScreen();
+
             }
             catch (ChessException e) {
                 System.out.println(e.getMessage());
