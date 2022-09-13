@@ -66,12 +66,10 @@ public class Board {
         if (piece(position) == null) {
             return null;
         }
-        else {
-            Piece aux = piece(position);
-            aux.position = null;
-            pieces[position.getRow()][position.getColumn()] = null;
-            return aux;
-        }
+        Piece aux = piece(position);
+        aux.position = null;
+        pieces[position.getRow()][position.getColumn()] = null;
+        return aux;
     }
 }
 

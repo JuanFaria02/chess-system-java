@@ -20,6 +20,7 @@ public class Program {
         while (!chessMatch.getCheckmate()) {
             //User Interface
             try {
+                UI.clearScreen();
                 UI.printMatch(chessMatch, captured);
                 System.out.println();
                 System.out.print("Source: ");
@@ -37,7 +38,6 @@ public class Program {
                 }
                 UI.clearScreen();
                 UI.printMatch(chessMatch, captured);
-                UI.clearScreen();
 
             }
             catch (ChessException e) {
