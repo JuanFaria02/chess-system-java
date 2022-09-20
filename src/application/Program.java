@@ -36,7 +36,6 @@ public class Program {
                 if (capturedPiece != null) {
                     captured.add(capturedPiece);
                 }
-                UI.clearScreen();
                 UI.printMatch(chessMatch, captured);
 
             }
